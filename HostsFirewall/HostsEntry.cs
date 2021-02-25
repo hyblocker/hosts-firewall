@@ -49,7 +49,7 @@
 				+ "\t\t"                        // Indentation duh
 				+ Domain;                       // The domain
 			output += (Comment.Trim().Length > 0 ?
-				(output.Length < 48 ? new string(' ', 48 - output.Length) : "\t")	// indentation black magic lol. idk it should align or something
+				(output.Length < 47 ? new string(' ', 47 - output.Length) : "\t")	// indentation black magic lol. idk it should align or something
 				+ "# " + Comment : string.Empty);                                   // The comment, doesn't get added if its empty
 
 			return output;

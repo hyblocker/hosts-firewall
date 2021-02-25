@@ -1,13 +1,7 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HostsFirewall
@@ -20,7 +14,7 @@ namespace HostsFirewall
 		private HostsFirewall firewall;
 		private AddDialog addDialog;
 
-		int lastTabIndex = 5;
+		int lastTabIndex = 4;
 
 		// Note to self: Consider writing your own controls if you ever touch this project again, fill rate is a bottleneck with this Material Design Library
 		//               Also it's compiled for framework and i have no idea why i can load and compile it on .net core
@@ -45,7 +39,7 @@ namespace HostsFirewall
 		{
 			for (int i = 0; i < firewall.Length; i++)
 			{
-				var card = CreateCard(firewall[i], i);
+				var card = CreateCard(i);
 				panel1.Controls.Add(card);
 				card.Location = new Point(12, 12 + 85 * i);
 
@@ -70,7 +64,7 @@ namespace HostsFirewall
 		{
 			int lastIndex = firewall.Length - 1;
 
-			var card = CreateCard(firewall[lastIndex], lastIndex);
+			var card = CreateCard(lastIndex);
 			panel1.Controls.Add(card);
 			card.Location = new Point(12, 12 + 85 * lastIndex);
 
@@ -94,7 +88,7 @@ namespace HostsFirewall
 		/// <param name="entry"></param>
 		/// <param name="id">the index or id of the card, for tabs or something idk</param>
 		/// <returns>The card which you are free to shove onto the form</returns>
-		public MaterialCard CreateCard(HostsEntry entry, int id)
+		public MaterialCard CreateCard(int id)
 		{
 			MaterialCard cardRoot = new MaterialCard();
 			MaterialSwitch cardToggle = new MaterialSwitch();
@@ -149,16 +143,16 @@ namespace HostsFirewall
 			cardToggle.TabIndex = lastTabIndex + id;
 			cardToggle.UseVisualStyleBackColor = true;
 
+			// fill the shit with the data
+			cardToggle.Checked = firewall[id].Enabled;
+			domainLabel.Text = firewall[id].Domain;
+			commentLabel.Text = firewall[id].Comment;
+
 			// Toggle Updating
 			cardToggle.CheckedChanged += (object sender, EventArgs e) =>
 			{
-				entry.Enabled = cardToggle.Checked;
+				firewall[id] = new HostsEntry(firewall[id].RedirectIp, firewall[id].Domain, cardToggle.Checked, firewall[id].Comment);
 			};
-
-			// fill the shit with the data
-			cardToggle.Checked = entry.Enabled;
-			domainLabel.Text = entry.Domain;
-			commentLabel.Text = entry.Comment;
 
 			return cardRoot;
 		}
