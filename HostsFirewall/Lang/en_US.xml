@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<lang region="en_US">
+	<il8n id="main_window.add">Add</il8n>
+	<il8n id="main_window.delete">Delete</il8n>
+	<il8n id="main_window.apply">Apply</il8n>
+	<il8n id="main_window.update_success.title">Success</il8n>
+	<il8n id="main_window.update_success.message">Successfully Updated HOSTS!</il8n>
+	
+	<il8n id="add_window.title">Add a New HOSTS Rule</il8n>
+	<il8n id="add_window.active">Active</il8n>
+	<il8n id="add_window.domain">Domain</il8n>
+	<il8n id="add_window.comment">Comment</il8n>
+	<il8n id="add_window.add">Add</il8n>
+	<il8n id="add_window.cancel">Cancel</il8n>
+</lang>

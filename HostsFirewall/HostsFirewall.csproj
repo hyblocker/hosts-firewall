@@ -6,10 +6,29 @@
     <UseWindowsForms>true</UseWindowsForms>
     <StartupObject>HostsFirewall.Program</StartupObject>
     <PublishTrimmed>true</PublishTrimmed>
+    <Authors>Hyblocker</Authors>
+    <Product>Hosts Firewall</Product>
+    <RepositoryUrl>https://github.com/hyblocker/hosts-firewall</RepositoryUrl>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Lang\en_US.xml" />
+    <None Remove="Lang\it_IT.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialSkin.2" Version="2.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Lang\en_US.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Lang\it_IT.xml" />
   </ItemGroup>
 
 </Project>

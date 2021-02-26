@@ -30,14 +30,14 @@ namespace HostsFirewall
 		private void InitializeComponent()
 		{
 			this.domainTextbox = new MaterialSkin.Controls.MaterialTextBox();
-			this.label1 = new System.Windows.Forms.Label();
+			this.titleLabel = new System.Windows.Forms.Label();
 			this.commentTextbox = new MaterialSkin.Controls.MaterialTextBox();
 			this.addButton = new MaterialSkin.Controls.MaterialButton();
 			this.cancelButton = new MaterialSkin.Controls.MaterialButton();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
+			this.commentLabel = new System.Windows.Forms.Label();
+			this.domainLabel = new System.Windows.Forms.Label();
 			this.activeToggle = new MaterialSkin.Controls.MaterialSwitch();
-			this.label4 = new System.Windows.Forms.Label();
+			this.activeLabel = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// domainTextbox
@@ -55,15 +55,15 @@ namespace HostsFirewall
 			this.domainTextbox.Text = "example.com";
 			this.domainTextbox.UseTallSize = false;
 			// 
-			// label1
+			// titleLabel
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Roboto Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label1.Location = new System.Drawing.Point(12, 13);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(155, 23);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "Add HOSTS Rule";
+			this.titleLabel.AutoSize = true;
+			this.titleLabel.Font = new System.Drawing.Font("Roboto Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.titleLabel.Location = new System.Drawing.Point(12, 13);
+			this.titleLabel.Name = "titleLabel";
+			this.titleLabel.Size = new System.Drawing.Size(155, 23);
+			this.titleLabel.TabIndex = 1;
+			this.titleLabel.Text = "Add HOSTS Rule";
 			// 
 			// commentTextbox
 			// 
@@ -120,25 +120,25 @@ namespace HostsFirewall
 			this.cancelButton.UseVisualStyleBackColor = true;
 			this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
 			// 
-			// label2
+			// commentLabel
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Roboto Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.label2.Location = new System.Drawing.Point(12, 134);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(73, 18);
-			this.label2.TabIndex = 5;
-			this.label2.Text = "Comment";
+			this.commentLabel.AutoSize = true;
+			this.commentLabel.Font = new System.Drawing.Font("Roboto Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.commentLabel.Location = new System.Drawing.Point(12, 134);
+			this.commentLabel.Name = "commentLabel";
+			this.commentLabel.Size = new System.Drawing.Size(73, 18);
+			this.commentLabel.TabIndex = 5;
+			this.commentLabel.Text = "Comment";
 			// 
-			// label3
+			// domainLabel
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Roboto Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.label3.Location = new System.Drawing.Point(12, 46);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(58, 18);
-			this.label3.TabIndex = 6;
-			this.label3.Text = "Domain";
+			this.domainLabel.AutoSize = true;
+			this.domainLabel.Font = new System.Drawing.Font("Roboto Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.domainLabel.Location = new System.Drawing.Point(12, 46);
+			this.domainLabel.Name = "domainLabel";
+			this.domainLabel.Size = new System.Drawing.Size(58, 18);
+			this.domainLabel.TabIndex = 6;
+			this.domainLabel.Text = "Domain";
 			// 
 			// activeToggle
 			// 
@@ -156,29 +156,29 @@ namespace HostsFirewall
 			this.activeToggle.TabIndex = 7;
 			this.activeToggle.UseVisualStyleBackColor = true;
 			// 
-			// label4
+			// activeLabel
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Roboto Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.label4.Location = new System.Drawing.Point(483, 17);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(48, 18);
-			this.label4.TabIndex = 8;
-			this.label4.Text = "Active";
+			this.activeLabel.AutoSize = true;
+			this.activeLabel.Font = new System.Drawing.Font("Roboto Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.activeLabel.Location = new System.Drawing.Point(483, 17);
+			this.activeLabel.Name = "activeLabel";
+			this.activeLabel.Size = new System.Drawing.Size(48, 18);
+			this.activeLabel.TabIndex = 8;
+			this.activeLabel.Text = "Active";
 			// 
 			// AddDialog
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(605, 281);
-			this.Controls.Add(this.label4);
+			this.Controls.Add(this.activeLabel);
 			this.Controls.Add(this.activeToggle);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.domainLabel);
+			this.Controls.Add(this.commentLabel);
 			this.Controls.Add(this.cancelButton);
 			this.Controls.Add(this.addButton);
 			this.Controls.Add(this.commentTextbox);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.domainTextbox);
 			this.MaximizeBox = false;
 			this.MaximumSize = new System.Drawing.Size(621, 320);
@@ -197,14 +197,14 @@ namespace HostsFirewall
 		#endregion
 
 		private MaterialSkin.Controls.MaterialTextBox domainTextbox;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label titleLabel;
 		private MaterialSkin.Controls.MaterialTextBox aaa;
 		private MaterialSkin.Controls.MaterialButton addButton;
 		private MaterialSkin.Controls.MaterialButton cancelButton;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label commentLabel;
+		private System.Windows.Forms.Label domainLabel;
 		private MaterialSkin.Controls.MaterialSwitch activeToggle;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label activeLabel;
 		private MaterialSkin.Controls.MaterialTextBox commentTextbox;
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace HostsFirewall
@@ -13,6 +14,30 @@ namespace HostsFirewall
 			InitializeComponent();
 			Window = window;
 			Firewall = firewall;
+
+			// Localize
+			Text = Localizer.GetValue("add_window.title");
+			titleLabel.Text = Localizer.GetValue("add_window.title");
+			activeLabel.Text = Localizer.GetValue("add_window.active");
+			domainLabel.Text = Localizer.GetValue("add_window.domain");
+			commentLabel.Text = Localizer.GetValue("add_window.comment");
+			addButton.Text = Localizer.GetValue("add_window.add");
+			cancelButton.Text = Localizer.GetValue("add_window.cancel");
+
+			// Resize the shit
+			addButton.AutoSize = false;
+			addButton.AutoSize = true;
+			
+			cancelButton.AutoSize = false;
+			cancelButton.AutoSize = true;
+
+			titleLabel.AutoSize = false;
+			titleLabel.AutoSize = true;
+
+			// reposition shit
+			addButton.Location = new Point(Size.Width - addButton.Size.Width - 29, addButton.Location.Y);
+			cancelButton.Location = new Point(Size.Width - addButton.Size.Width - 37 - cancelButton.Width, addButton.Location.Y);
+			activeLabel.Location = new Point(Size.Width - 90 - activeLabel.Size.Width, 17);
 		}
 
 		private void addButton_Click(object sender, EventArgs e)

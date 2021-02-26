@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<lang region="it_IT">
+	<il8n id="main_window.add">Aggiugni</il8n>
+	<il8n id="main_window.delete">Elimina</il8n>
+	<il8n id="main_window.apply">Applica</il8n>
+	<il8n id="main_window.update_success.title">Successo</il8n>
+	<il8n id="main_window.update_success.message">Aggiornò HOSTS successo!</il8n>
+
+	<il8n id="add_window.title">Aggiugni un Nuovo Ruolo HOSTS</il8n>
+	<il8n id="add_window.active">Attivo</il8n>
+	<il8n id="add_window.domain">Dominio</il8n>
+	<il8n id="add_window.comment">Commento</il8n>
+	<il8n id="add_window.add">Aggiugni</il8n>
+	<il8n id="add_window.cancel">Cancella</il8n>
+</lang>

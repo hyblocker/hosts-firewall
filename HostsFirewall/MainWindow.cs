@@ -23,6 +23,23 @@ namespace HostsFirewall
 		{
 			InitializeComponent();
 			firewall = new HostsFirewall();
+
+			// Localize
+			addButton.Text = Localizer.GetValue("main_window.add");
+			deleteButton.Text = Localizer.GetValue("main_window.delete");
+			applyButton.Text = Localizer.GetValue("main_window.apply");
+
+			// Resize the shit
+			addButton.AutoSize = false;
+			addButton.AutoSize = true;
+
+			deleteButton.AutoSize = false;
+			deleteButton.AutoSize = true;
+			deleteButton.Location = new Point(addButton.Location.X + addButton.Size.Width + 8, deleteButton.Location.Y);
+
+			applyButton.AutoSize = false;
+			applyButton.AutoSize = true;
+			applyButton.Location = new Point(Size.Width - applyButton.Size.Width - 29, applyButton.Location.Y);
 		}
 
 		// Called when the window is loaded
@@ -164,7 +181,13 @@ namespace HostsFirewall
 		{
 			firewall.WriteHosts();
 			firewall.FlushDNSCache();
-			MessageBox.Show("Successfully Updated HOSTS!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+			// Message box cuz i expect user feedback breh
+			MessageBox.Show(
+				Localizer.GetValue("main_window.update_success.message"),
+				Localizer.GetValue("main_window.update_success.title"),
+				MessageBoxButtons.OK,
+				MessageBoxIcon.Information);
 		}
 
 		/// <summary>
